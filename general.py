@@ -2,4 +2,9 @@
    hyderabad
    bikkavolu
    kakinada
-   rajhamandry
+rajhamandry
+   jana
+   chiru
+   sivam
+   rajini
+   
