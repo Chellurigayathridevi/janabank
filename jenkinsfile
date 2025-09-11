@@ -1,25 +1,8 @@
-pipeline {
-    agent any
-
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/Chellurigayathridevi/janabank.git'
-            }
-        }
-
-        stage('Build Docker Image') {
-            steps {
-                sh 'docker-compose build'
-            }
-        }
-
-        stage('Deploy with Docker Compose') {
-            steps {
-                sh 'docker-compose down'
-                sh 'docker-compose up -d'
-            }
-        }
+stage('Clone Repository') {
+    steps {
+        git branch: 'main',
+            url: 'https://github.com/Chellurigayathridevi/janabank.git',
+            credentialsId: 'github-creds'
     }
 }
 
